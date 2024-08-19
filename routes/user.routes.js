@@ -3,6 +3,6 @@ const router = express.Router();
 const userController = require("../controllers/user.controller");
 
 // POST route to add a new user
-router.post("/add", userController.addUser);
+router.post("/addUser", userController.addUser);
 
 module.exports = router;
