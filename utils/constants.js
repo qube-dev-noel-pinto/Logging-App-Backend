@@ -1,5 +1,5 @@
-// HTTP Status Codes
-const HTTP_STATUS = {
+const RESPONSE = {
+  STATUS: {
     OK: 200,
     CREATED: 201,
     ACCEPTED: 202,
@@ -14,10 +14,9 @@ const HTTP_STATUS = {
     BAD_GATEWAY: 502,
     SERVICE_UNAVAILABLE: 503,
     GATEWAY_TIMEOUT: 504
-  };
-  
-  // Response Messages
-  const RESPONSE_MESSAGES = {
+  },
+
+  MESSAGE: {
     OK: 'Request was successful.',
     CREATED: 'Resource was successfully created.',
     ACCEPTED: 'Request has been accepted for processing.',
@@ -32,10 +31,10 @@ const HTTP_STATUS = {
     BAD_GATEWAY: 'The server received an invalid response from the upstream server.',
     SERVICE_UNAVAILABLE: 'The server is currently unable to handle the request due to a temporary overload or maintenance.',
     GATEWAY_TIMEOUT: 'The server did not receive a timely response from the upstream server or some other auxiliary server it needed to access in order to complete the request.'
-  };
+  }
+}
   
-  module.exports = {
-    HTTP_STATUS,
-    RESPONSE_MESSAGES
-  };
+module.exports = {
+  RESPONSE
+};
   
