@@ -30,7 +30,14 @@ const RESPONSE = {
     NOT_IMPLEMENTED: 'The server does not support the functionality required to fulfill the request.',
     BAD_GATEWAY: 'The server received an invalid response from the upstream server.',
     SERVICE_UNAVAILABLE: 'The server is currently unable to handle the request due to a temporary overload or maintenance.',
-    GATEWAY_TIMEOUT: 'The server did not receive a timely response from the upstream server or some other auxiliary server it needed to access in order to complete the request.'
+    GATEWAY_TIMEOUT: 'The server did not receive a timely response from the upstream server or some other auxiliary server it needed to access in order to complete the request.',
+    DATA_FETCHED: 'Data fetched successfully',
+    DATA_UPDATED: 'Data updated successfully',
+    DATA_ADDED: 'Data added successfully',
+    DATA_REMOVED: 'Data removed successfully',
+    DATA_NOT_FOUND: 'Data not found',
+    USER_NOT_FOUND: 'User not found',
+    NO_DATA: 'No data available'
   }
 }
   

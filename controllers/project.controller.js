@@ -35,9 +35,9 @@ exports.getProjects = async (req, res) => {
     }
 
     const projects = await Project.find({ userIds: userId });
-    if(projects.length == 0) return res.status(RESPONSE.STATUS.NO_CONTENT).json({ message: RESPONSE.MESSAGE.NO_CONTENT })
+    if(projects.length == 0) return res.status(RESPONSE.STATUS.NO_CONTENT).json({ status: true, message: RESPONSE.MESSAGE.NO_DATA  })
 
-    res.status(RESPONSE.STATUS.OK).json(projects);
+    res.status(RESPONSE.STATUS.OK).json({ status: true, message: RESPONSE.MESSAGE.DATA_FETCHED, data: projects});
   } catch (error) {
     res.status(RESPONSE.STATUS.INTERNAL_SERVER_ERROR).json({ message: RESPONSE.MESSAGE.INTERNAL_SERVER_ERROR, error: error.message });
   }

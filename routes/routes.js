@@ -6,7 +6,7 @@ const projectRoutes = require('./project.routes');
 const logRoutes = require('./log.routes');
 
 // Register sub-routes
-router.use('/api/users', userRoutes)
+router.use('/api/user', userRoutes)
 router.use('/api/company', companyRoutes)
 router.use('/api/project', projectRoutes)
 router.use('/api/logs', logRoutes)
