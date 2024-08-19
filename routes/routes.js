@@ -9,6 +9,6 @@ const logRoutes = require('./log.routes');
 router.use('/api/users', userRoutes)
 router.use('/api/company', companyRoutes)
 router.use('/api/project', projectRoutes)
-router.use('/api/log', logRoutes)
+router.use('/api/logs', logRoutes)
 
 module.exports = router;
