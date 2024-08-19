@@ -24,3 +24,21 @@ exports.addProject = async (req, res) => {
     res.status(RESPONSE.STATUS.INTERNAL_SERVER_ERROR).json({ message: RESPONSE.MESSAGE.INTERNAL_SERVER_ERROR, error: error.message });
   }
 };
+
+// Get all projects for a specific user
+exports.getProjects = async (req, res) => {
+  try {
+    const { userId } = req.body;
+
+    if (!userId) {
+      return res.status(RESPONSE.STATUS.BAD_REQUEST).json({ message: "User ID is required." });
+    }
+
+    const projects = await Project.find({ userIds: userId });
+    if(projects.length == 0) return res.status(RESPONSE.STATUS.NO_CONTENT).json({ message: RESPONSE.MESSAGE.NO_CONTENT })
+
+    res.status(RESPONSE.STATUS.OK).json(projects);
+  } catch (error) {
+    res.status(RESPONSE.STATUS.INTERNAL_SERVER_ERROR).json({ message: RESPONSE.MESSAGE.INTERNAL_SERVER_ERROR, error: error.message });
+  }
+};
